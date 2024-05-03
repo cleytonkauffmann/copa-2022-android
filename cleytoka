@@ -1,0 +1,60 @@
+GetMatchesUseCase.kt:
+kotlin
+Copy code
+// GetMatchesUseCase.kt
+class GetMatchesUseCase {
+    // Implemente a lógica para buscar partidas
+    // Pode ser necessário injetar dependências aqui, como um repositório
+}
+EnableNotificationUseCase.kt:
+kotlin
+Copy code
+// EnableNotificationUseCase.kt
+class EnableNotificationUseCase {
+    // Implemente a lógica para habilitar notificações
+    // Pode ser necessário injetar dependências aqui, como um gerenciador de notificações
+}
+DisableNotificationUseCase.kt:
+kotlin
+Copy code
+// DisableNotificationUseCase.kt
+class DisableNotificationUseCase {
+    // Implemente a lógica para desabilitar notificações
+    // Pode ser necessário injetar dependências aqui, como um gerenciador de notificações
+}
+MainViewModel.kt:
+kotlin
+Copy code
+import androidx.lifecycle.ViewModel
+
+class MainViewModel : ViewModel() {
+    // Declare os casos de uso como propriedades do ViewModel
+    private val getMatchesUseCase = GetMatchesUseCase()
+    private val enableNotificationUseCase = EnableNotificationUseCase()
+    private val disableNotificationUseCase = DisableNotificationUseCase()
+
+    // Implemente métodos para interagir com a Activity
+    // Por exemplo, métodos para buscar partidas, habilitar e desabilitar notificações
+
+    fun fetchMatches() {
+        // Lógica para buscar partidas
+    }
+
+    fun enableNotifications() {
+        // Lógica para habilitar notificações
+    }
+
+    fun disableNotifications() {
+        // Lógica para desabilitar notificações
+    }
+}
+MainScreen.kt:
+kotlin
+Copy code
+import androidx.compose.runtime.Composable
+
+@Composable
+fun MainScreen(viewModel: MainViewModel) {
+    // Implemente a UI usando o Jetpack Compose
+    // Por exemplo, crie um layout que exiba as partidas e tenha opções para habilitar/desabilitar notificações
+}
